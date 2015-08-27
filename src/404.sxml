@@ -1,0 +1,17 @@
+((layouts))
+'((doctype-html)
+  (html
+   (@ (lang "en"))
+   (head
+    (meta (@ (charset "UTF-8")))
+    (link (@ (href "/css/404.css") (rel "stylesheet") (type "text/css")))
+    (title "404"))
+   (body
+    (div
+     (@ (class "error"))
+     (div (@ (class "smiley")) ":(")
+     "The server ran into a problem and needs to restart.  We're just collecting some error info, and then we'll restart for you (0% complete)."
+     (div
+      (@ (class "message"))
+      (p "If you'd like to know more, you can search online later for this error: 404_PAGE_NOT_FOUND")
+      (p "Alternatively you may get back to " (a (@ (href "http://emacsninja.com/")) "http://emacsninja.com/") " or hit your browser's back button."))))))
