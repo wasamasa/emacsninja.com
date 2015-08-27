@@ -8,7 +8,7 @@ has made me an Emacs ninja.
 This blog will focus on wielding Emacs_ and `Emacs Lisp`_ effectively,
 but also feature articles on `Arch Linux`_, `CHICKEN Scheme`_ and
 other topics worth writing about.  If you're looking for something
-more whimsy, give `Emacs Horrors`_ a try.
+more whimsical, give `Emacs Horrors`_ a try.
 
 .. _ninjas use Vi and pirates use Emacs: http://philosecurity.org/2009/03/23/pirates-and-ninjas-emacs-or-vi
 .. _Emacs: https://www.gnu.org/software/emacs/
