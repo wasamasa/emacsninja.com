@@ -96,6 +96,27 @@ And there you go.  This time with the actual code I'm running:
 
 Next up: Explaining what the hell I'm doing there with Evil_.
 
+edit: Turns out ``frame-initialize`` was a false lead.  Earlier in the
+text I've suggested a possible way to verify that there's always an
+initial frame.  Here's the output of the batch mode for the frame
+list:
+
+.. code:: shell
+
+    $ emacs --batch --eval "(princ (frame-list))"
+    # (#<frame F1 0xbd29e8>)
+
+It's interesting that this initial frame isn't named after a buffer,
+but always gets a hardcoded name.  Searching the sources for ``"F1"``
+leads to ``make_initial_frame`` called from ``init_window_once``
+called from the main function.  I assume that for a normal Emacs
+session this initial frame is kept and turned into a fully-featured
+graphical one while it is kept as is for both daemon and batch mode.
+This explains of course why the hook function wasn't called:  That
+piece of code didn't contain anything to run it.  Worse even, the bare
+frame probably couldn't be altered by hook functions given how little
+of it is initialized.
+
 .. _i3: http://i3wm.org/
 .. _RMS agrees they'd better be called panes: https://lists.gnu.org/archive/html/emacs-devel/2014-01/msg00496.html
 .. _a package for it: http://www.emacswiki.org/emacs/OneOnOneEmacs
