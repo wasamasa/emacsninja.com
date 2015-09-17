@@ -1,5 +1,6 @@
 ((title . "Atom Feeds With CHICKEN")
- (date . "2015-09-17 22:47:41 +0200"))
+ (date . "2015-09-17 22:47:41 +0200")
+ (updated . "2015-09-18 00:32:29 +0200"))
 
 I do rarely eat out, but when I do, I visit `Cologne's nicest burger
 restaurant`_.  They regularly come up with a new "Burger Of The Week",
@@ -136,7 +137,7 @@ atom egg's API:
          entries: (map (match-lambda
                         ((id date description url permalink)
                          (make-entry
-                          id: (number->string date)
+                          id: permalink
                           title: (make-title (unix->date date))
                           updated: (unix->datetime date)
                           links: (list (make-link uri: permalink))
@@ -187,6 +188,13 @@ just reverse proxy with nginx_:
     }
 
 Yes, it's that simple.  Full sources are on Github_ as usual.
+
+**Update**: I wasn't reading closely enough when it came to the ID of
+each atom feed item.  It's important to ensure it is sufficiently
+unique and never changes so that a feed reader can use it for
+identifying each news item.  In this case the permalink is good
+enough, but for blogs made with Hyde one needs to make sure a format
+string with two placeholders for tag and date is used.
 
 .. _Cologne's nicest burger restaurant: http://www.fettekuh.de/
 .. _Facebook feed: https://www.facebook.com/DiefetteKuh
