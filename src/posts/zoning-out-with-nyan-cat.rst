@@ -3,7 +3,7 @@
 
 For those of you who haven't heard of ``zone`` yet, I urge you to give
 it a try with ``M-x zone``.  If you like what you see, ``M-x
-zone-mode`` makes for a screensaver-like experience.
+zone-when-idle`` makes for a screensaver-like experience.
 
 It shouldn't surprise anyone that Emacs has facilities for playing
 tricks with your buffer text while you aren't looking.  I've always
