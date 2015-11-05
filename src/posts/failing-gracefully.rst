@@ -1,5 +1,13 @@
 ((title . "Failing Gracefully")
- (date . "2015-11-05 09:55:38 +0100"))
+ (date . "2015-11-05 09:55:38 +0100")
+ (updated . "2015-11-05 10:36:37 +0200"))
+
+**Update**: Just using ``display-buffer`` doesn't work for me with
+``emacsclient``, so I've gone for a slightly more radical solution,
+altering the initial buffer.  For some reason
+``initial-buffer-choice`` seems to be heavily biased towards files, so
+you'll need to replace it with ``(setq initial-buffer-choice (lambda
+() (get-buffer "*init errors*")))``.
 
 One of the more annoying problems with Emacs and its init file is that
 any error encountered while loading it will prohibit it from
@@ -75,7 +83,7 @@ buffer with a report shall be popped up:
             (insert error "\n"))
           (goto-char (point-min))
           (special-mode))
-        (display-buffer "*init errors*")))
+        (setq initial-buffer-choice (lambda () (get-buffer "*init errors*")))))
 
 This could be improved in a number of ways, like by tracking the last
 heading and evaluating every single form in the code block on its
