@@ -1,107 +1,97 @@
 ;; -*- mode: scheme; -*-
 ()
-(let ((base1 "#fefefe")
-      (base2 "#272822")
-      (base3 "#75715e")
-      (base4 "#111111")
-      (pink "#f92672")
-      (lime "#75af00")
-      (cyan "#00a8c8")
+;; TODO: fix up color theme
+(let ((black "#333")
+      (gray "#999")
+      (white "#fff")
+      (orange "#f60")
+      (dark-blue "#009")
 
-      (sans "Arial, Helvetica, sans-serif")
       (mono "'Courier New', Courier, monospace"))
+  ;; TODO: fix up navigation (put it on top)
   `((*
      (margin 0)
      (padding 0))
-    (html
-     (height "100%"))
     (body
-     (height "100%")
-     (width "43em")
+     (width "40em")
      (margin 0 "auto")
-     (font-family ,sans)
+     (font-family ,mono)
      (font-size "1.2em")
      (line-height "1.3em")
-     (color ,base2)
-     (background-color ,base1))
-
-    (.wrapper
-     (min-height "100%"))
-    (.main
-     (padding-top "2em")
-     (padding-bottom "1.2em"))
-    ((.posts .post)
-     (width "42em"))
-    (.post
-     (padding "0.5em" 0))
-    (.page
-     (width "42em"))
-
-    (.footer
-     (position "relative")
-     (margin-top "-1.5em")
-     (height "1.2em")
-     (clear "both")
-     ((// ul)
-      (list-style "none")
-      (padding 0))
-     ((// li)
-      (display "inline")
-      (padding 0 "0.5em")
-      ((& :first-child)
-       (padding 0))))
+     (color ,black)
+     (background-color ,white))
 
     (h1
      (font-weight "bold")
      (font-size "1.5em")
      (margin "0.5em" 0))
-    (tt
-     (font-family ,mono)
-     (color ,lime))
+
     (p
+     (margin "1em" 0)
      (hyphens "auto")
      (-ms-hyphens "auto")
      (-moz-hyphens "auto")
      (-webkit-hyphens "auto")
      (text-align "justify"))
-    (blockquote
-     (padding 0 0 0 "1em")
-     (border-left "8px" ,base3 "solid"))
-    (((ol ul))
-     (padding "0.5em" 0 "0.5em" "1.5em")
-     (list-style-position "outside"))
-    (dd
-     (padding "0.5em 1em"))
-    (((p table))
-     (margin "1em" 0))
-    (pre
+
+    (tt
      (font-family ,mono)
-     (overflow "visible")
+     (color ,orange))
+
+    (pre
      (margin "0.5em" 0)
-     (width "41em"))
+     (font-family ,mono))
+
     (hr
      (margin "1em" 0)
-     (border "1px" ,base3 "solid"))
-    (a:link
-     (color ,cyan))
-    (a:visited
-     (color ,pink))
+     (border "none")
+     (border-top "2px" ,gray "dashed"))
+
+    (blockquote
+     (padding 0 0 0 "1em")
+     (border-left "8px" ,gray "solid"))
+
+    (ol
+     (padding "0.5em" 0)
+     (counter-reset "ol")
+     ((// li)
+      (list-style "none"))
+     ((// li:before)
+      (counter-increment "ol")
+      (content "counter(ol, decimal) '. '")
+      (margin-left "-3ex")
+      (color ,gray)))
+
+    (ul
+     (padding "0.5em" 0)
+     ((// li)
+      (list-style "none"))
+     ((// li:before)
+      (margin-left "-2ex")
+      (color ,gray)
+      (content "'* '")))
 
     (table
-     (border "1px" ,base4 "solid")
+     (margin "1em" 0)
+     (border "1px" ,black "solid")
      (border-collapse "collapse")
      (((// td) (// th))
       (padding 0 "0.1em"))
      ((& .footnote)
-      (border-style "none")
+      (border "none")
+      (border-top "2px" ,gray "dashed")
       (display "block")
       (margin "0.5em" 0)
+      (padding-top "1em")
+     ;; HACK: nth-of-type(1) applies to the element, not the class, so
+     ;; this *removes* the top border and padding from everything
+     ;; except the first footnote table
+      ((// |~ .footnote|)
+       (border-top "none")
+       (padding-top 0))
       ((// td)
        (padding 0)
-       (padding-right "0.5em"))
-      ((& |:nth-of-type(1)|)
-       (border-top "1px" ,base4 "solid")
-       (padding-top "1em")))
+       (padding-right "0.5em")))
      ((& .layout)
       (margin "1em" 0)
       (border-style "none")
@@ -109,15 +99,20 @@
        (vertical-align "top")
        (padding 0 "0.5em" 0 0)
        ((// .key)
-        (color ,base3)
+        (color ,gray)
         (font-weight "bold")))))
 
     (((.date .category))
      (font-family ,mono)
      (padding-bottom "0.5em")
      (padding-right "0.5em")
-     (color ,base3)
+     (color ,gray)
      (display "block"))
+
+    (a:link
+     (color ,dark-blue))
+    (a:visited
+     (color ,black))
 
     (|#reverse|
      (unicode-bidi "bidi-override")
