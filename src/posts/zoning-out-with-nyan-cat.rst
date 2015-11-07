@@ -25,7 +25,7 @@ remaining time on thinking up a good way to encode these in a less
 brain-dead manner.
 
 I did decide on giving SVG another try, simply because I was
-underwhelmed with generating Bitmaps larger than an icon with Emacs
+underwhelmed with generating bitmaps larger than an icon with Emacs
 Lisp.  Dealing with a XML string is yucky, dealing with a nested list
 however is close to perfect if you've got something like esxml_ at
 hand to convert it to a XML representation.  I've scrapped my previous
