@@ -50,25 +50,26 @@
      (padding 0 0 0 "1em")
      (border-left "8px" ,gray "solid"))
 
-    (ol
-     (padding "0.5em" 0)
-     (counter-reset "ol")
-     ((// li)
-      (list-style "none"))
-     ((// li:before)
-      (counter-increment "ol")
-      (content "counter(ol, decimal) '. '")
-      (margin-left "-3ex")
-      (color ,gray)))
+    (.post
+     ((// ol)
+      (padding "0.5em" 0)
+      (counter-reset "ol")
+      ((// li)
+       (list-style "none"))
+      ((// li:before)
+       (counter-increment "ol")
+       (content "counter(ol, decimal) '. '")
+       (margin-left "-3ex")
+       (color ,gray)))
 
-    (ul
-     (padding "0.5em" 0)
-     ((// li)
-      (list-style "none"))
-     ((// li:before)
-      (margin-left "-2ex")
-      (color ,gray)
-      (content "'* '")))
+     ((// ul)
+      (padding "0.5em" 0)
+      ((// li)
+       (list-style "none"))
+      ((// li:before)
+       (margin-left "-2ex")
+       (color ,gray)
+       (content "'* '"))))
 
     (dd
      (padding "0.5em 1em"))
@@ -103,6 +104,17 @@
        ((// .key)
         (color ,gray)
         (font-weight "bold")))))
+
+    (.header
+     (margin "1em" 0)
+     ((// ul)
+      (list-style "none")
+      (padding 0))
+     ((// li)
+      (display "inline")
+      (padding 0 "0.5em")
+      ((& :first-child)
+       (padding 0))))
 
     (((.date .category))
      (font-family ,mono)

@@ -10,12 +10,7 @@
     (title ,(string-append "Emacs Ninja - " ($ 'title))))
    (body
     (div
-     (@ (class "wrapper"))
-     (div
-      (@ (class "main"))
-      (inject ,contents)))
-    (div
-     (@ (class "footer"))
+     (@ (class "header"))
      (ul ,@(map (lambda (link)
                   `(li ,(if (string=? (car link) ($ 'title))
                             (car link)
@@ -26,4 +21,6 @@
                   ("About" . "/about.html")
                   ("Colophon" . "/colophon.html")
                   ("Imprint" . "/imprint.html")
-                  ("Legal" . "/legal.html"))))))))
+                  ("Legal" . "/legal.html")))))
+    (div
+     (inject ,contents)))))
