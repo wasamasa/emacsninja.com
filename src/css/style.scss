@@ -70,6 +70,9 @@
       (color ,gray)
       (content "'* '")))
 
+    (dd
+     (padding "0.5em 1em"))
+
     (table
      (margin "1em" 0)
      (border "1px" ,black "solid")
