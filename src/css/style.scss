@@ -45,7 +45,7 @@
     (hr
      (margin "1em" 0)
      (border "none")
-     (border-top "2px" ,gray "dashed"))
+     (border-top "2px" ,gray "solid"))
 
     (blockquote
      (padding 0 0 0 "1em")
@@ -79,7 +79,7 @@
       (padding 0 "0.1em"))
      ((& .footnote)
       (border "none")
-      (border-top "2px" ,gray "dashed")
+      (border-top "1px" ,gray "solid")
       (display "block")
       (margin "0.5em" 0)
       (padding-top "1em")
