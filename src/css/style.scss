@@ -6,15 +6,15 @@
       (red "#900")
       (dark-blue "#009")
 
+      (sans "Arial, Helvetica, sans-serif")
       (mono "'Courier New', Courier, monospace"))
-  ;; TODO: fix up navigation (put it on top)
   `((*
      (margin 0)
      (padding 0))
     (body
      (width "45em")
      (margin 0 "auto")
-     (font-family ,mono)
+     (font-family ,sans)
      (font-size "1.1em")
      (line-height "1.2em")
      (color ,black)
