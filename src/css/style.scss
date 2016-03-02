@@ -62,14 +62,8 @@
        (margin-left "-3ex")
        (color ,gray)))
 
-     ((// ul)
-      ((// li)
-       (list-style "none")
-       (padding "0.5em" 0))
-      ((// li:before)
-       (margin-left "-2ex")
-       (color ,gray)
-       (content "'* '"))))
+     ((// ul li)
+      (padding "0.5em" 0)))
 
     (dd
      (padding "0.5em 1em"))
