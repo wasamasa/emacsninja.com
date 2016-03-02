@@ -11,7 +11,7 @@ MAL itself`_ which is used to test self-hosting_.
 My implementation is fairly standard.  As much as people love `hating
 on Emacs Lisp`_, it has proven to be a perfectly viable choice for
 writing interpreters.  I doubt picking Common Lisp or CHICKEN would
-have made for nicer code.
+have made for much nicer code.
 
 If you're wondering whether to implement MAL as well, go for it!  It
 will teach you how interpreting Lisp works and that writing an
@@ -19,16 +19,22 @@ interpreter is easier than it looks like.  While it doesn't need to be
 in a language not featured in its repository, it's nice to contribute
 a new one.
 
+To run the implementation, check out the MAL repository, change into
+its directory and run ``emacs -Q --batch --load elisp/stepA_mal.el``.
+Development was done on Emacs 24.5 with brief testing on Emacs 24.3 as
+it is still a fairly popular implementation.
+
 Here's a few random notes I've made while writing this thing:
 
 - ``--batch`` mode is terrible_.  This is not surprising given what
-  purpose Emacs Lisp was developed for, but still annoying because I
-  couldn't find any way of making readline_-style keybindings work in
-  my REPL.  Neither adding hooks to the command loop nor changing
-  keymaps (be it in the read functions or ``minibuffer-setup-hook``)
-  did work, so you'll need to use ``rlwrap`` for a nicer experience.
+  purpose Emacs Lisp was developed for (an extension language to be
+  used *inside* Emacs), but still annoying because I couldn't find any
+  way of making readline_-style keybindings work in my REPL.  Neither
+  adding hooks to the command loop nor changing keymaps (be it in the
+  read functions or ``minibuffer-setup-hook``) did work, so you'll
+  need to use ``rlwrap`` for a nicer experience.
 - You can read input with ``read-from-minibuffer``.  It cannot read
-  more than one line and throws an error on EOF, so I wrappd it into
+  more than one line and throws an error on EOF, so I wrapped it into
   ``ignore-errors`` and checked whether it returned nil...
 - You can print with the ``print``/``princ``/``prin1`` family.
   ``message`` on the other hand prints to ``stderr``, same for
@@ -66,7 +72,7 @@ Here's a few random notes I've made while writing this thing:
   control flow (not exception handling) and are used to implement a
   ``return``.
 - Exception handling is weird, but usable.  You can use
-  ``define-error``, but only in Emacs 24.5.  If you just ``signal`` an
+  ``define-error``, but only in Emacs 24.4.  If you just ``signal`` an
   undefined error and retrieve an error string for it, Emacs turns its
   into the infamous ``Peculiar error``.
 - One of the nicer new Emacs Lisp features is the closure support.
