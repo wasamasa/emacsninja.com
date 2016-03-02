@@ -63,9 +63,9 @@
        (color ,gray)))
 
      ((// ul)
-      (padding "0.5em" 0)
       ((// li)
-       (list-style "none"))
+       (list-style "none")
+       (padding "0.5em" 0))
       ((// li:before)
        (margin-left "-2ex")
        (color ,gray)
