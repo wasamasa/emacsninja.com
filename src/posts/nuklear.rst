@@ -36,7 +36,7 @@ table keys anywhere`_ it works surprisingly well.  Other than that
 I've used the C API here and there to pass around Scheme values that
 were impossible to represent directly with the FFI.
 
-The greatest problem I've' encountered was a lack of documentation.
+The greatest problem I've encountered was a lack of documentation.
 Fortunately I've figured out everything necessary myself, but I still
 have the impression that I'm missing out on something.  I hope to get
 in contact with upstream regarding the bugs I ran into, otherwise I'll
