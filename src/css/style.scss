@@ -52,18 +52,7 @@
      (border-left "8px" ,gray "solid"))
 
     (.post
-     ((// ol)
-      (padding "0.5em" 0)
-      (counter-reset "ol")
-      ((// li)
-       (list-style "none"))
-      ((// li:before)
-       (counter-increment "ol")
-       (content "counter(ol, decimal) '. '")
-       (margin-left "-3ex")
-       (color ,gray)))
-
-     ((// ul li)
+     ((// ol ul li)
       (padding "0.5em" 0)))
 
     (dd
