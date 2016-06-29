@@ -92,10 +92,12 @@ managing memory in my wrapper:
 
    It turns out that you can use CHICKEN's garbage collector in your
    favor.  It is fairly fast when it comes to allocating more memory
-   and can be made to play along with foreign code.  The trick is to
-   create a blob of the right size, then hand a locative pointing to
-   it to the foreign function expecting a pointer and filling your
-   data in:
+   as it is using the C stack and ``alloca`` to store Scheme objects.
+   Therefore, all we'd need is a way to use a Scheme object in foreign
+   code as it will be subject to Scheme's scoping rules and can be
+   reclaimed once it's no longer accessible.  For this you create a
+   blob of the right size, then hand a locative pointing to it to the
+   foreign function expecting a pointer and fill your data in:
 
    .. code:: scheme
 
