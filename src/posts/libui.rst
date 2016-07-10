@@ -1,5 +1,6 @@
 ((title . "libui")
- (date . "2016-06-28 21:30:14 +0200"))
+ (date . "2016-06-28 21:30:14 +0200")
+ (updated . "2016-07-10 20:14:34 +0200"))
 
 I've released `the third and last egg`_ in my series of wrappers for
 GUI libraries!  Maybe there will be more, but none I'll work on
