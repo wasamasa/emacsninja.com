@@ -53,7 +53,12 @@ managing memory in my wrapper:
                     area-handler*))
                 (area-handler (make-area-handler area-handler* draw-handler mouse-event-handler mouse-crossed-handler drag-broken-handler key-event-handler)))
            (hash-table-set! area-table area-handler* area-handler)
-           (set-finalizer! area-handler free)))
+           (set-finalizer! area-handler area-handler-free!)))
+
+       (define (area-handler-free! area-handler)
+         (and-let* ((area-handler* (area-handler-pointer area-handler)))
+           (free area-handler)
+           (area-handler-pointer-set! area-handler #f)))
 
    The latter was a bit difficult as libui is too smart and attempts
    detecting memory leaks on its own when the ``uiUninit`` function is
@@ -117,9 +122,9 @@ managing memory in my wrapper:
            brush))
 
    An alternative way is storing the locative inside the record and
-   omitting the pointer procedure.  While this variant has the benefit
-   of always having the same pointer, it will break after garbage
-   collection has moved the blob around, effectively invalidating the
-   pointer.
+   omitting the pointer procedure.  While this variant requires a bit
+   less code, and avoids creating locatives on demand, it's not
+   entirely safe to use due to `bug #1293`_.
 
 .. _the third and last egg: https://github.com/wasamasa/libui
+.. _bug #1293: http://bugs.call-cc.org/ticket/1293
