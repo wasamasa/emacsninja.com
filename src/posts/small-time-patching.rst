@@ -1,5 +1,8 @@
 ((title . "Small-time Patching")
- (date . "2016-09-22 23:13:35 +0200"))
+ (date . "2016-09-22 23:13:35 +0200")
+ (updated . "2016-09-22 23:21:41 +0200"))
+
+**Update**: Added the improved backtrace
 
 Today ``#emacs`` reminded me of an oddity in Emacs I've sort of
 learned to live with:  Backtraces are, well, see for yourself:
@@ -123,6 +126,19 @@ The result is the following teensy patch:
      	  {
      	    ptrdiff_t i;
      	    for (i = 0; i < backtrace_nargs (pdl); i++)
+
+And an IMHO vastly improved backtrace:
+
+.. code::
+
+    Debugger entered--Lisp error: (wrong-type-argument number-or-marker-p t)
+      (debug error (wrong-type-argument number-or-marker-p t))
+      (+ 1 t)
+      (eval (+ 1 t) nil)
+      (eval-expression (+ 1 t) nil)
+      (funcall-interactively eval-expression (+ 1 t) nil)
+      (call-interactively eval-expression nil nil)
+      (command-execute eval-expression)
 
 Not sure whether to bother submitting this...  Let me know what you
 think!
