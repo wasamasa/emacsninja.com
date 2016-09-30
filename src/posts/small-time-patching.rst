@@ -1,8 +1,10 @@
 ((title . "Small-time Patching")
  (date . "2016-09-22 23:13:35 +0200")
- (updated . "2016-09-22 23:21:41 +0200"))
+ (updated . "2016-09-30 17:58:23 +0200"))
 
 **Update**: Added the improved backtrace
+
+**Update**: `Merged <http://git.savannah.gnu.org/cgit/emacs.git/commit/?id=d1890a3a4a18f79cabf4caf8d194cdc29ea4bf05>`_!
 
 Today ``#emacs`` reminded me of an oddity in Emacs I've sort of
 learned to live with:  Backtraces are, well, see for yourself:
