@@ -49,10 +49,9 @@ Regarding oddities, here's an incomplete list:
   immutable ones.
 - Unknown symbols evaluate to ``NIL`` instead of throwing an
   exception.
-- Indentation (and even pretty-printing) is a lot easier
-  than in classic Lisp dialects as it's basically about increasing the
-  depth by three spaces for each level instead of ligning up
-  parentheses.
+- Indentation (and even pretty-printing) is a lot easier than in
+  classic Lisp dialects as it's basically about increasing the depth
+  by three spaces for each level instead of lining up parentheses.
 - Closing parentheses that do not belong to the current line are
   separated by spaces.  For convenience's sake, a closing bracket is
   interpreted as "super paren" and closes all remaining parentheses.
