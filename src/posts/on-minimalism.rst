@@ -44,9 +44,9 @@ Regarding oddities, here's an incomplete list:
   Additionally to doubling as string replacement, these are not equal
   to other symbols with the same contents and are therefore used to
   avoid name clashes in macro-like functions.
-- No closures.  If you need to capture something from the environment,
-  you must do this manually and have the choice between mutable and
-  immutable ones.
+- No implicit closures.  If you need to capture something from the
+  environment, you must do this explicitly and have the choice between
+  mutable and immutable ones.
 - Unknown symbols evaluate to ``NIL`` instead of throwing an
   exception.
 - Indentation (and even pretty-printing) is a lot easier than in
