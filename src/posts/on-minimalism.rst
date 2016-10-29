@@ -16,7 +16,7 @@ after having learned Emacs Lisp, Clojure and Scheme.  Furthermore,
 Scheme already claims to take minimalism as language design principle
 and of course there are more obscure Lisp dialects, like Arc_ and
 newLISP_.  I can only blame a friend who told me about this
-fascinating talk given by the PicoLisp author demonstrating the
+fascinating talk_ given by the PicoLisp author demonstrating the
 abilities of his programming language.  The overall picture my friend
 painted was that of a bizarro world where a crazy German ignored all
 established rules for a Lisp dialect, walking the fine line between
@@ -77,3 +77,4 @@ Regarding oddities, here's an incomplete list:
 .. _PicoLisp: http://picolisp.com/
 .. _Arc: http://www.arclanguage.org/
 .. _newLISP: http://www.newlisp.org/
+.. _talk: https://media.ccc.de/v/froscon2012-1040-picolisp_application_development
