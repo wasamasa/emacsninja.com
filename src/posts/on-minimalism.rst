@@ -1,5 +1,11 @@
 ((title . "On Minimalism")
- (date . "2016-10-26 23:44:31 +0200"))
+ (date . "2016-10-26 23:44:31 +0200")
+ (updated . "2015-11-17 20:10:03 +0100"))
+
+**Update**: There is `a CL merge request`_ that supports SBCL among
+other implementations, as expected it beats the picolisp
+implementation in speed by a factor of 2x.  Still, I'm fine with being
+second place :)
 
 `I've implemented MAL for the third time by now`_, this time in
 PicoLisp_, a language priding itself on its implementation simplicity.
@@ -78,3 +84,4 @@ Regarding oddities, here's an incomplete list:
 .. _Arc: http://www.arclanguage.org/
 .. _newLISP: http://www.newlisp.org/
 .. _talk: https://media.ccc.de/v/froscon2012-1040-picolisp_application_development
+.. _a CL merge request: https://github.com/kanaka/mal/pull/248
