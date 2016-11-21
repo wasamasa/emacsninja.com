@@ -1,5 +1,12 @@
 ((title . "Brave New World")
- (date . "2016-11-17 22:17:26 +0100"))
+ (date . "2016-11-17 22:17:26 +0100")
+ (updated . "2016-11-21 10:32:43 +0100"))
+
+**Update**: Finally figured out the layout after digging a bit more
+into the sources, it's a QWERTY-UK (see
+``devices/rpi2/uspi/include/uspios.h``).  Looks like I'll have to
+modify the bundled `USPI library`_ to include a QWERTY-US layout
+before I can make any progress on keyboard remapping in Lisp...
 
 I believe I've found an even greater time sink than writing Lisp
 interpreters for fun.  Long time ago, I've read an encouraging blog
@@ -48,3 +55,4 @@ enter key.  Happy hacking!
 .. _the future of the LispM: https://www.arrdem.com/2014/11/28/the_future_of_the_lispm/
 .. _Interim OS: https://github.com/mntmn/interim
 .. _soon: https://github.com/mntmn/interim/pull/13
+.. _USPI library: https://github.com/rsta2/uspi/
