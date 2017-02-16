@@ -1,5 +1,6 @@
 ((title . "On Transcending Borders")
- (date . "2016-01-22 22:17:09 +0100"))
+ (date . "2016-01-22 22:17:09 +0100")
+ (emacs? . #t))
 
 Reddit_ reminded me today that the infamous ``xwidget`` branch has
 been finally merged into the ``emacs-25`` branch.  As usual there

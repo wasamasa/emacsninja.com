@@ -1,6 +1,7 @@
 ((title . "Failing Gracefully")
  (date . "2015-11-05 09:55:38 +0100")
- (updated . "2015-11-05 10:36:37 +0200"))
+ (updated . "2015-11-05 10:36:37 +0200")
+ (emacs? . #t))
 
 **Update**: Just using ``display-buffer`` doesn't work for me with
 ``emacsclient``, so I've gone for a slightly more radical solution,

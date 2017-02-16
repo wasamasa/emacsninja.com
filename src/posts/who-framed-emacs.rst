@@ -1,5 +1,6 @@
 ((title . "Who Framed Emacs?")
- (date . "2015-08-27 14:10:54 +0200"))
+ (date . "2015-08-27 14:10:54 +0200")
+ (emacs? . #t))
 
 To be honest, I don't really like frames [1]_ in Emacs.  One reason is
 how bad they play with i3_, my preferred tiling window manager.  Any

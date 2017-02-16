@@ -28,20 +28,25 @@
 
 (define $ (environment-ref (page-eval-env) '$))
 
-(define (filter-posts)
-  (filter (lambda (page) (irregex-match post-regex (car page)))
+(define (filter-posts emacs?)
+  (filter (lambda (page)
+            (and (irregex-match post-regex (car page))
+                 (if emacs?
+                     ($ 'emacs? (cdr page))
+                     #t)))
           (pages)))
 
 (define (sort-by-date posts)
   (sort posts (lambda (a b) (string>=? ($ 'date (cdr a))
                                        ($ 'date (cdr b))))))
 
-(define (all-posts)
-  (map cdr (sort-by-date (filter-posts))))
+(define (all-posts emacs?)
+  (map cdr (sort-by-date (filter-posts emacs?))))
 
 (define max-posts 5)
-(define (latest-posts)
-  (let ((posts (all-posts)))
+
+(define (latest-posts emacs?)
+  (let ((posts (all-posts emacs?)))
     (if (<= (length posts) max-posts)
         posts
         (take posts max-posts))))

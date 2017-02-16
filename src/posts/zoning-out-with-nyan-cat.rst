@@ -1,5 +1,6 @@
 ((title . "Zoning Out With Nyan Cat")
- (date . "2015-10-28 21:31:59 +0100"))
+ (date . "2015-10-28 21:31:59 +0100")
+ (emacs? . #t))
 
 For those of you who haven't heard of ``zone`` yet, I urge you to give
 it a try with ``M-x zone``.  If you like what you see, ``M-x

@@ -1,6 +1,7 @@
 ((title . "Small-time Patching")
  (date . "2016-09-22 23:13:35 +0200")
- (updated . "2016-09-30 17:58:23 +0200"))
+ (updated . "2016-09-30 17:58:23 +0200")
+ (emacs? . #t))
 
 **Update**: Added the improved backtrace
 

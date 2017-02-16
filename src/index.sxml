@@ -10,4 +10,4 @@
           (@ (class "post"))
           (inject ,(read-page post)))
          (hr)))
-     (latest-posts)))
+     (latest-posts #f)))

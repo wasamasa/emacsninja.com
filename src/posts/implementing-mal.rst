@@ -1,5 +1,6 @@
 ((title . "Implementing MAL")
- (date . "2016-03-02 13:56:47 +0100"))
+ (date . "2016-03-02 13:56:47 +0100")
+ (emacs? . #t))
 
 `I did it`_!  For those of you who don't know yet, MAL_ is a
 Clojure-like language specially made for getting into the language

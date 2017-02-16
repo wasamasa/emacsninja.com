@@ -1,5 +1,6 @@
 ((title . "ich1 the CSI Killer")
- (date . "2016-04-16 23:04:31 +0200"))
+ (date . "2016-04-16 23:04:31 +0200")
+ (emacs? . #t))
 
 One of the optional parts of `implementing MAL`_ was line editing for
 easier interaction with the interpreter.  Most implementations either

@@ -1,5 +1,6 @@
 ((title . "Translating Keys For Fun And Profit")
- (date . "2015-09-11 23:59:29 +0200"))
+ (date . "2015-09-11 23:59:29 +0200")
+ (emacs? . #t))
 
 I've got to admit that Vim is pretty clever when it comes to its key
 bindings.  Never did I notice that ``TAB`` and ``C-i`` are the same
