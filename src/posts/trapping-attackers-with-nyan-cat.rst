@@ -1,5 +1,8 @@
 ((title . "Trapping Attackers With Nyan Cat")
- (date . "2017-01-22 14:54:48 +0100"))
+ (date . "2017-01-22 14:54:48 +0100")
+ (updated . "2017-06-21 01:22:34 +0100"))
+
+**Update**: Fixed some things that kept this from working.
 
 In case you haven't done it yet, I strongly recommend you to give
 ``telnet nyancat.dakko.us`` a try.  If you don't have a telnet client
@@ -26,6 +29,7 @@ config and service file:
 .. code:: shell
 
     % useradd -m -s /bin/sh anonymous
+    % passwd anonymous
     % cp /usr/lib/systemd/system/sshd.service /etc/systemd/system/nyanpot.service
     % cp /etc/ssh/sshd_config /etc/ssh/nyanpot_sshd_config
 
@@ -46,14 +50,14 @@ anonymous user:
 .. code::
 
     Port 22
-    PermitRootLogin No
-    PermitTTY No
-    PasswordAuthentication No
-    X11Forwarding No
-    AllowTcpForwarding No
+    PermitRootLogin no
+    PermitTTY no
+    PasswordAuthentication no
+    X11Forwarding no
+    AllowTcpForwarding no
     Match User anonymous
-        PasswordAuthentication Yes
-        PermitTTY Yes
+        PasswordAuthentication yes
+        PermitTTY yes
         ForceCommand nyancat
 
 You can test the service with ``systemctl start nyanpot.service`` and
