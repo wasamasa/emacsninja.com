@@ -34,7 +34,7 @@ dependencies.
 The approach taken in `esxml-query.el`_ is recursive-descent parsing,
 as seen in software like GCC.  Generally speaking, a language can be
 described by a set of rules where the left side refers to its name and
-the right size explains what it expands to.  Expansions are sequences
+the right side explains what it expands to.  Expansions are sequences
 of other rules or constants (which naturally cannot be expanded) and
 may contain syntactic sugar, such as the Kleene star (as seen in
 regular expressions).  Given an input string described by the grammar,
