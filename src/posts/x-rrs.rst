@@ -15,11 +15,12 @@ follows:
 Chibi_
   The recommended implementation if you're looking for a fully
   standards-compliant one.  It comes with its own comprehensive test
-  suite that's borrowed by others.  I've had zero issues with it,
-  although the overall speed could be better, earning it the last
-  place (where it's tied with Foment).  This is somewhat weird
-  considering that it's advertised as small yet embeddable, Picrin
-  would be another candidate for that purpose.
+  suite that has been borrowed by others.  I've had zero issues with
+  it, although the overall speed could be better, earning it the last
+  place in the toy benchmarks (where it's tied with Foment).  This is
+  somewhat weird considering that it's advertised as small yet
+  embeddable (look at Lua for an example of a fast one in that
+  domain); Picrin would be another candidate for that purpose.
 
 Kawa_
   It proudly wears the GNU banner (despite not being the Scheme
@@ -72,7 +73,7 @@ Cyclone_
 
 Foment_
   Someone's personal project for learning Scheme.  It's about the same
-  speed as Chibi and not quite there yet.
+  speed as Chibi and not quite finished yet.
 
 Guile_
   The Scheme officially endorsed by GNU.  It had a long time in
@@ -80,15 +81,15 @@ Guile_
   adjustments.
 
 Racket_
-  I'm somewhat surprised there is inofficial support for R7RS, given
+  I'm somewhat surprised there is unofficial support for R7RS, given
   that the language itself has been derived from R6RS.  Not tested
   yet.
 
 Larceny_
   Research project that supports R5RS, R6RS and R7RS to varying
   degrees.  Due to R7RS incompatibilities, a somewhat outdated
-  documentation and a ridiculous toolchain to set it up I've decided
-  to test it at some later point to see whether it becomes the fastest
+  documentation and a ridiculous toolchain, I've decided to test it at
+  some later point to see whether it becomes the fastest
   implementation for MAL.
 
 Gerbil_
