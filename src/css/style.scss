@@ -53,10 +53,12 @@
 
     (.post
      ((// li)
-      (margin 0 "1em")))
+      (margin 0 "1em")
+      (text-align "justify")))
 
     (dd
-     (padding "0.5em 1em"))
+     (padding "0.5em 1em")
+     (text-align "justify"))
 
     (table
      (margin "1em" 0)
