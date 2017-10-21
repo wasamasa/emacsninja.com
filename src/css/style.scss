@@ -118,4 +118,10 @@
      (unicode-bidi "bidi-override")
      (direction "rtl"))
     (.strike
-     (text-decoration "line-through"))))
+     (text-decoration "line-through"))
+
+    (media
+     "(max-width: 800px)"
+     (body (width "90%"))
+     (pre
+      (overflow-x "scroll")))))
