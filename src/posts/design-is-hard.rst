@@ -1,5 +1,6 @@
 ((title . "Design Is Hard")
- (date . "2017-10-20 11:34:31 +0200"))
+ (date . "2017-10-20 11:34:31 +0200")
+ (emacs? . #t))
 
 This isn't about the pixel pushing kind of design, but the engineering
 one.  Given a problematic matter, what choices do you make to create a
