@@ -17,5 +17,5 @@
         (print path)
         (with-output-to-file path
           (lambda ()
-            (display (format "((title . ~s)\n (date . ~s) (emacs? . #f))\n\n"
+            (display (format "((title . ~s)\n (date . ~s)\n (emacs? . #f))\n\n"
                              title date)))))))
