@@ -15,7 +15,7 @@ exercises:
 
 - You should under no circumstances use ECB as cipher mode
 - Padding is a crucial thing to get right, both when attacking
-  cryptographic systems and when implementing it
+  cryptographic systems and when implementing them
 - An attacker can bitflip your ciphertexts into anything they want and
   the only thing you can do about it is checking whether they've been
   tampered with before decrypting (like with a MAC or signature)
