@@ -13,7 +13,8 @@
            "rst2html"
            (lambda ()
              '("--link-stylesheet" "--smart-quotes=yes"
-               "--syntax-highlight=short" "--trim-footnote-reference-space"))))
+               "--syntax-highlight=short" "--trim-footnote-reference-space"
+               "--initial-header-level=2"))))
          (dom (with-input-from-string (with-output-to-string rst) html->sxml))
          (html (serialize-sxml ((sxpath "//body/div/node()") dom) indent: #f)))
       (display html)))
