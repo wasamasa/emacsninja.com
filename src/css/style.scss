@@ -35,6 +35,9 @@
      (-webkit-hyphens "auto")
      (text-align "justify"))
 
+    (img
+     (margin "0.5em" 0))
+
     (tt
      (font-family ,mono)
      (color ,red))
@@ -53,6 +56,8 @@
      (border-left "8px" ,gray "solid"))
 
     (.post
+     ((// ul)
+      (margin "0.5em" 0))
      ((// li)
       (margin 0 "1em")
       (text-align "justify")))
