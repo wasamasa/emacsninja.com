@@ -205,7 +205,8 @@ support.  I ran into a few inconsistencies with the documentation, but
 eventually figured everything out and got pretty disassembly with
 arrows visualizing the control flow for jumps and calls.
 
-.. TODO: Add image
+.. image:: /img/chip8-r2-graph-thumb.png
+   :target: /img/chip8-r2-graph.png
 
 Later I discovered that radare2_ actually does have CHIP-8 support in
 core, you need to enable it explicitly by adding ``-a chip8`` to the
@@ -391,7 +392,14 @@ Super CHIP-8
 At this point I was pretty much done with implementing the full CHIP-8
 feature set and started playing games like Tetris, Brix and Alien.
 
-.. TODO: add pretty pictures
+.. image:: /img/chip8-tetris-thumb.png
+   :target: /img/chip8-tetris.png
+
+.. image:: /img/chip8-brix-thumb.png
+   :target: /img/chip8-brix.png
+
+.. image:: /img/chip8-alien-thumb.png
+   :target: /img/chip8-alien.png
 
 Yet I wasn't satisfied for some strange reason.  I probably longed for
 more distraction and set out to implement the remaining Super CHIP-8
@@ -419,6 +427,9 @@ play the probably silliest arcade game ever conceived, Joust.  The
 sprites in the picture below are supposed to be knights on flying
 ostrichs trying to push each other down with their lances, but they
 look more like flying rabbits to me.
+
+.. image:: /img/chip8-joust-thumb.png
+   :target: /img/chip8-joust.png
 
 Other Musings
 -------------
