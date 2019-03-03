@@ -122,7 +122,7 @@ the type and operands of each instruction is encoded inline and needs
 to be extracted by using basic bit fiddling.  Emacs Lisp offers
 ``logand`` and ``ash`` for this, corresponding to ``&``, ``<<`` and
 ``>>`` in C.  First the bits to be extracted are masked by using
-`logand` with an argument where all bits to be kept are set to ones,
+``logand`` with an argument where all bits to be kept are set to ones,
 then the result is shifted all the way to the right with ``ash`` using
 a negative argument.  Take for example the ``JP nnn`` instruction
 which is encoded as ``#x1nnn``, for this you'd extract the type by
