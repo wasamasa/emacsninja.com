@@ -1,6 +1,11 @@
 ((title . "Code Conversion Language")
  (date . "2019-07-20 22:02:52 +0200")
+ (updated . "2019-07-20 23:31:15 +0200")
  (emacs? . #t))
+
+**Update**: I forgot that I did `a brief analysis
+<https://gist.github.com/wasamasa/e5f0489676e7ac769e91>`_ on this many
+years ago, using ROT13 as example.
 
 Emacs is most famously, a re-imagination of a Lisp machine, with the
 Emacs Lisp byte-code interpreter being at its core.  A lesser-known
