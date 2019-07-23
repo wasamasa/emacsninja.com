@@ -1,11 +1,18 @@
 ((title . "Code Conversion Language")
  (date . "2019-07-20 22:02:52 +0200")
- (updated . "2019-07-20 23:31:15 +0200")
+ (updated . "2019-07-23 20:37:14 +0200")
  (emacs? . #t))
 
 **Update**: I forgot that I did `a brief analysis
 <https://gist.github.com/wasamasa/e5f0489676e7ac769e91>`_ on this many
 years ago, using ROT13 as example.
+
+**Update**: Noam Postavsky pointed out on ``#emacs`` that CCL is not
+turing-complete after all as a full simulation (as opposed to just
+interpreting a single line) requires an Emacs Lisp loop.  This loop
+cannot be done in CCL itself as it doesn't allow feeding its output
+back in as input.  The I/O restrictions most likely put it into the
+weaker category of `finite-state transducers`_.
 
 Emacs is most famously, a re-imagination of a Lisp machine, with the
 Emacs Lisp byte-code interpreter being at its core.  A lesser-known
@@ -490,6 +497,15 @@ numbers:
 If you want to see it in action, try evaluating ``(progn (princ
 (sierpinski)) nil)`` in ``M-x ielm``.
 
+Now for a big letdown, despite everything what I've demonstrated, this
+system is not turing-complete after all.  While it's capable of
+processing a single line of input, the proof of `Rule 110`_ being
+turing-complete relies on feeding its output in as input over and over
+again, however that part has been done in Emacs Lisp as it's
+impossible to do in CCL.  I'm not 100% sure what CCL's computing power
+is, Noam Postavsky suggested on ``#emacs`` that it's most likely a
+`finite-state transducer`_.
+
 Final words
 -----------
 
@@ -527,3 +543,5 @@ doing some things far better than presented, send me a message.
 .. _Rule 110: https://en.wikipedia.org/wiki/Rule_110
 .. _Rule 90: https://en.wikipedia.org/wiki/Rule_90
 .. _Sierpinski triangle: https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle
+.. _finite-state transducers: https://en.wikipedia.org/wiki/Finite-state_transducer
+.. _finite-state transducer: https://en.wikipedia.org/wiki/Finite-state_transducer
