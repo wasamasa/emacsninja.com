@@ -10,20 +10,26 @@
     (a
      (color ,white)
      (font-weight "bold"))
+    (.qrcode
+     (float "left")
+     (margin-right "1em")
+     ((// img)
+      (width "100px")
+      (height "100px")))
     (.error
      (width "50%")
      (height "auto") (margin "auto")
      (max-height "15em")
      (line-height "1.4em")
      (position "absolute")
-     (top 0) (left 0) (bottom 0) (right 0))
-    ((// .smiley)
-     (font-size "5em")
-     (margin-bottom "0.5em"))
-    ((// .message)
-     (margin "1em" 0)
-     (line-height "1.3em")
-     (font-size "0.5em"))
+     (top 0) (left 0) (bottom 0) (right 0)
+     ((// .smiley)
+      (font-size "5em")
+      (margin-bottom "0.5em"))
+     ((// .message)
+      (margin "1em" 0)
+      (line-height "1.3em")
+      (font-size "0.5em")))
     (media
      "(max-width: 800px)"
      (body
@@ -31,6 +37,6 @@
      (.error
       (width "initial")
       (line-height "initial")
-      (margin "3em 3em auto 3em"))
-     ((// .message)
-      (font-size "0.9em")))))
+      (margin "3em 3em auto 3em")
+      ((// .message)
+       (font-size "0.9em"))))))
