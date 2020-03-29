@@ -10,9 +10,9 @@ but also feature articles on `Arch Linux`_, `CHICKEN Scheme`_ and
 other topics worth writing about.  If you're looking for something
 more whimsical, give `Emacs Horrors`_ a try.
 
-.. _ninjas use Vi and pirates use Emacs: http://philosecurity.org/2009/03/23/pirates-and-ninjas-emacs-or-vi
+.. _ninjas use Vi and pirates use Emacs: http://web.archive.org/web/20090326050541/http://philosecurity.org/2009/03/23/pirates-and-ninjas-emacs-or-vi
 .. _Emacs: https://www.gnu.org/software/emacs/
-.. _Emacs Lisp: http://www.gnu.org/software/emacs/manual/html_node/elisp/index.html
+.. _Emacs Lisp: https://www.gnu.org/software/emacs/manual/html_node/elisp/index.html
 .. _Arch Linux: https://archlinux.org/
-.. _CHICKEN Scheme: http://www.call-cc.org/
-.. _Emacs Horrors: http://emacshorrors.com/
+.. _CHICKEN Scheme: https://www.call-cc.org/
+.. _Emacs Horrors: https://emacshorrors.com/

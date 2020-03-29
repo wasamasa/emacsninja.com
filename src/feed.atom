@@ -2,8 +2,8 @@
  (subtitle . "Blog")
  (authors "Vasilij Schneidermann")
  (date . "") ; HACK: unused
- (base-uri . "http://emacsninja.com")
- (tag . "tag:http://emacsninja.com,~a:~a"))
+ (base-uri . "https://emacsninja.com")
+ (tag . "tag:https://emacsninja.com,~a:~a"))
 (pages->atom-doc (latest-posts #f)
                  page-date->rfc3339-string:
                  (lambda (timestamp)
